@@ -3,9 +3,9 @@ layout: default
 ---
 
 <div class="header">
-    <h1>{{ site.name }}</h1>
+    <h1>{{ site.baseurl.name }}</h1>
     <ul>
-        {% for item in site.data.navigation %}
+        {% for item in site.baseurl.data.navigation %}
         <li>
             <a href="{{ item.url }}">{{ item.title }}</a>
         </li>
@@ -14,9 +14,9 @@ layout: default
 </div>
 <div class="blog">
     <ul>
-        {% for post in site.posts %}
+        {% for post in site.baseurl.posts %}
         <li>
-            <span class="date">{{ post.date | date: '%Y %b %d' }}</span> - <a href="{{ post.url }}">{{ post.title }}</a>
+            <span class="date">{{ post.date | date: '%Y %b %d' }}</span> - <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
         </li>
         {% endfor %}
     </ul>
