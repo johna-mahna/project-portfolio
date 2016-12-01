@@ -1,6 +1,8 @@
 # Blog settings
 permalink: /blog/:title
 
+baseurl: /project-portfolio
+
 # My variables
 name: Johna Paolino
 description: UX Design
